@@ -74,6 +74,11 @@ public class ReadMoreTextView extends AppCompatTextView {
         });
     }
 
+    public void setContent(String content) {
+        setText(content);
+        setReadMore();
+    }
+
     private void setTypeArray(AttributeSet attrs, int defStyle) {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.ReadMoreTextView, defStyle, 0);
 
