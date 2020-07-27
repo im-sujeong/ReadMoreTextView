@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ReadMoreTextView">
+        <attr name="readMoreText" format="string|reference" />
+        <attr name="readMoreTextColor" format="color|reference" />
+    </declare-styleable>
+</resources>
