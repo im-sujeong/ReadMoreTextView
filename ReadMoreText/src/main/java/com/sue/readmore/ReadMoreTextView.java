@@ -53,10 +53,12 @@ public class ReadMoreTextView extends AppCompatTextView {
             @Override
             public void run() {
                 String originText = getText().toString();
+
+                int realLines = getLineCount();
                 int maxLines = getMaxLines() > 100 ? -1 : getMaxLines();
 
-                if( maxLines > -1 ) {
-                    int origLineEndIndex = getLayout().getLineEnd(getLineCount()-1);
+                if( maxLines < realLines && maxLines > -1 ) {
+                    int origLineEndIndex = getLayout().getLineEnd(realLines-1);
                     int lastLineEndIndex = getLayout().getLineVisibleEnd(maxLines - 1);
 
                     if( lastLineEndIndex < origLineEndIndex ) {
